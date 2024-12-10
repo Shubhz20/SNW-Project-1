@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>After Hours - Cybersecurity</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        /* Basic reset and full height for body */
         body, html {
             margin: 0;
             padding: 0;
@@ -14,52 +13,49 @@
             width: 100%;
             font-family: Arial, sans-serif;
             color: #fff;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
+            overflow-x: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
         }
 
-        /* Full-screen video background */
         .video-background {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensure the video covers the entire screen */
-            z-index: -1; /* Ensure the video stays behind other content */
+            object-fit: cover;
+            z-index: -1;
         }
 
-        /* Header - "After Hours" title in bold and big font with blur effect */
         header {
             text-align: center;
             z-index: 1;
             position: relative;
             padding: 30px;
-            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-            backdrop-filter: blur(5px); /* Apply blur effect to the background */
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
             border-radius: 10px;
-            margin-top: 150px; /* Removed space above header */
+            margin-top: 150px;
         }
 
         header h1 {
-            font-size: 10em; /* Large font size */
-            font-weight: bold; /* Bold font */
+            font-size: 10em;
+            font-weight: bold;
             color: #1DB954;
             margin: 0;
             padding:0px;
         }
 
-        /* Navigation Bar Below the Header with blur effect */
         nav {
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-            backdrop-filter: blur(5px); /* Apply blur effect */
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
             position: relative;
             padding:  0;
-            margin-top: 0; /* Removed space between header and navigation */
+            margin-top: 0;
             border-radius: 10px;
         }
 
@@ -85,18 +81,17 @@
             text-decoration: underline;
         }
 
-        /* Explanation Section About Cybersecurity */
         .explanation-section {
             padding: 20px;
-            background-color: rgba(18, 18, 18, 0.5); /* Semi-transparent background for blur effect */
-            backdrop-filter: blur(5px); /* Apply background blur */
+            background-color: rgba(18, 18, 18, 0.5);
+            backdrop-filter: blur(5px);
             width: 100%;
             max-width: 1000px;
-            margin-top: 20px; /* Reduced margin to bring the explanation closer to the navigation */
+            margin-top: 20px;
             color: #fff;
             text-align: center;
             border-radius: 10px;
-            margin-bottom: 30px; /* Reduced margin between explanation and next section */
+            margin-bottom: 30px;
         }
 
         .explanation-section h2 {
@@ -110,11 +105,10 @@
             line-height: 1.6;
         }
 
-        /* Team Section Below the Explanation */
         .team-section {
             display: flex;
             justify-content: space-around;
-            margin: 10px 0; /* Reduced margin to bring team section closer */
+            margin: 10px 0;
             width: 100%;
             padding: 0 20px;
             z-index: 1;
@@ -140,7 +134,6 @@
             margin-bottom: 10px;
         }
 
-        /* Social Media Icons */
         .team-member .social-icons a {
             margin: 5px;
             color: #1DB954;
@@ -152,7 +145,6 @@
             text-decoration: underline;
         }
 
-        /* Footer at the end */
         footer {
             text-align: center;
             padding: 20px 0;
@@ -162,26 +154,22 @@
             bottom: 0;
             width: 100%;
         }
-
     </style>
 </head>
 <body>
 
-    <!-- Full-Screen Video Background -->
     <video class="video-background" autoplay loop muted>
         <source src="images/2887463-hd_1920_1080_25fps copy.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
-    <!-- Header with "After Hours" title centered and bold -->
     <header>
         <h1>After Hours</h1>
     </header>
 
-    <!-- Navigation Bar -->
     <nav>
         <ul>
-            <li><a href="project1.html">Details</Details></a></li>
+            <li><a href="project1.html">Details</a></li>
             <li><a href="courses.html">Courses</a></li>
             <li><a href="newsletter.html">Newsletter</a></li>
             <li><a href="webinar.html">Webinar</a></li>
@@ -190,7 +178,6 @@
         </ul>
     </nav>
 
-    <!-- Explanation Section About Cybersecurity -->
     <section class="explanation-section">
         <h2>What is Cybersecurity?</h2>
         <p>
@@ -200,9 +187,7 @@
         </p>
     </section>
 
-    <!-- Hands Behind the Website Section -->
     <section class="team-section">
-        <!-- Team Member 1 -->
         <div class="team-member">
             <img src="images/WhatsApp Image 2024-12-10 at 23.26.37 copy.jpeg" alt="Team Member 1">
             <h3>Harshit Agrawal</h3>
@@ -213,7 +198,6 @@
             </div>
         </div>
         
-        <!-- Team Member 2 -->
         <div class="team-member">
             <img src="WhatsApp Image 2024-12-10 at 23.36.09 copy.jpeg" alt="Team Member 2">
             <h3>Harshit Gupta</h3>
@@ -224,7 +208,6 @@
             </div>
         </div>
 
-        <!-- Team Member 3 -->
         <div class="team-member">
             <img src="images/WhatsApp Image 2024-12-10 at 23.32.22 copy.jpeg" alt="Team Member 3">
             <h3>Rounit Kumar Singh</h3>
@@ -236,12 +219,9 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 AfterHours. All Rights Reserved.</p>
     </footer>
 
 </body>
-</html>
-
 </html>
