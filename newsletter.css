@@ -10,7 +10,7 @@ body {
 
 /* Header */
 header {
-    background-color: #b00020;
+    background-color: #1a1a1a;
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -34,6 +34,9 @@ header p {
 
 /* Post Sections */
 .post {
+    display: flex; /* Flexbox for positioning text and image side by side */
+    justify-content: space-between; /* Space between text and image */
+    align-items: center; /* Vertically align items */
     margin: 20px 0;
     padding: 20px;
     border-radius: 10px;
@@ -80,6 +83,28 @@ header p {
 
 .twitter h2 {
     color: #1DA1F2;
+}
+
+/* Post Content (Text Section) */
+.post-content {
+    width: 60%; /* Take up 60% of the space */
+}
+
+.post-image {
+    width: 35%; /* Image takes up 35% of the space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Make sure image is vertically aligned */
+    overflow: hidden; /* Hide any overflow */
+}
+
+.post-image img {
+    width: 100%; /* Ensure the image takes full width of the container */
+    height: auto; /* Maintain aspect ratio of the image */
+    object-fit: cover; /* Cover the container area without distorting the image */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Links */

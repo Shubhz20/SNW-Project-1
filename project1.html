@@ -4,56 +4,180 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>After Hours - Cybersecurity</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome CDN for icons -->
     <style>
-        body {
+        /* Basic reset and full height for body */
+        body, html {
             margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
             font-family: Arial, sans-serif;
-            background-color: #000;
             color: #fff;
-            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
+
+        /* Full-screen video background */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the video covers the entire screen */
+            z-index: -1; /* Ensure the video stays behind other content */
+        }
+
+        /* Header - "After Hours" title in bold and big font with blur effect */
         header {
             text-align: center;
-            padding: 20px 0;
-            border-bottom: 1px solid #444;
-        }
-        header h1 {
-            font-size: 2.5em;
-            color: #1DB954;
-        }
-        .section {
-            padding: 50px 20px;
-        }
-        .about, .contact, .support {
-            max-width: 800px;
-            margin: 0 auto;
-            border: 1px solid #444;
-            border-radius: 10px;
-            background-color: #121212;
+            z-index: 1;
+            position: relative;
             padding: 30px;
-            margin-bottom: 20px;
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+            backdrop-filter: blur(5px); /* Apply blur effect to the background */
+            border-radius: 10px;
+            margin-top: 0; /* Removed space above header */
         }
-        h2 {
+
+        header h1 {
+            font-size: 5em; /* Large font size */
+            font-weight: bold; /* Bold font */
             color: #1DB954;
+            margin: 0;
         }
-        a {
+
+        /* Navigation Bar Below the Header with blur effect */
+        nav {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+            backdrop-filter: blur(5px); /* Apply blur effect */
+            position: relative;
+            padding: 15px 0;
+            margin-top: 0; /* Removed space between header and navigation */
+            border-radius: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
             color: #1DB954;
             text-decoration: none;
+            font-size: 18px;
         }
-        a:hover {
+
+        nav ul li a:hover {
             text-decoration: underline;
         }
+
+        /* Explanation Section About Cybersecurity */
+        .explanation-section {
+            padding: 20px;
+            background-color: rgba(18, 18, 18, 0.5); /* Semi-transparent background for blur effect */
+            backdrop-filter: blur(5px); /* Apply background blur */
+            width: 100%;
+            max-width: 1000px;
+            margin-top: 20px; /* Reduced margin to bring the explanation closer to the navigation */
+            color: #fff;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px; /* Reduced margin between explanation and next section */
+        }
+
+        .explanation-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #1DB954;
+        }
+
+        .explanation-section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Team Section Below the Explanation */
+        .team-section {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0; /* Reduced margin to bring team section closer */
+            width: 100%;
+            padding: 0 20px;
+            z-index: 1;
+        }
+
+        .team-member {
+            text-align: center;
+            max-width: 200px;
+            background-color: rgba(18, 18, 18, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .team-member img {
+            width: 100%;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .team-member h3 {
+            color: #1DB954;
+            margin-bottom: 10px;
+        }
+
+        /* Social Media Icons */
+        .team-member .social-icons a {
+            margin: 5px;
+            color: #1DB954;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .team-member .social-icons a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer at the end */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: rgba(18, 18, 18, 0.9);
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
     </style>
 </head>
 <body>
+
+    <!-- Full-Screen Video Background -->
+    <video class="video-background" autoplay loop muted>
+        <source src="images/2887463-hd_1920_1080_25fps copy.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Header with "After Hours" title centered and bold -->
     <header>
         <h1>After Hours</h1>
-        <p>Your Cybersecurity Companion</p>
-    <title>AfterHours | Cybersecurity Solutions</title>
-    
-    <link rel="stylesheet" href="project1.css">
-</head> 
-<header>
+    </header>
+
+    <!-- Navigation Bar -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -64,54 +188,58 @@
             <li><a href="blog.html">Blog</a></li>
         </ul>
     </nav>
-</header>
-<body>
-    <header>
-        <h1>AfterHours</h1>
-        <p>Your Gateway to Online Security</p>
-    </header>
 
-    <footer class="section about">
-        <h2>About Us</h2>
+    <!-- Explanation Section About Cybersecurity -->
+    <section class="explanation-section">
+        <h2>What is Cybersecurity?</h2>
         <p>
-            Welcome to After Hours, where cybersecurity meets innovation. Our platform is dedicated to providing 
-            state-of-the-art solutions to safeguard your digital presence. Explore resources, tools, and strategies 
-            to stay secure in an ever-evolving cyber landscape.
-
-            At AfterHours, we provide advanced cybersecurity solutions to protect your digital assets 
-            and ensure your online safety. With expertise in threat detection, data encryption, and 
-            security consultation, we safeguard your digital world.
+            Cybersecurity is the practice of defending systems, networks, and data from digital attacks, theft, and damage. In today's increasingly connected world, protecting your personal information and digital assets is more important than ever. 
+            <br><br>
+            At After Hours, we are committed to guiding you through the complex world of cybersecurity. Whether you are a beginner or an advanced user, we provide the tools, courses, and resources to help you stay safe online and protect your data from evolving cyber threats.
         </p>
-    </footer>
+    </section>
 
-    <footer class="section contact">
-        <h2>Contact Us</h2>
-        <p>Have questions or need assistance? Reach out to us:</p>
-        <ul>
-            <li>Email: <a href="mailto:support@afterhours.com">support@afterours.com</a></li>
-            <li>Phone: </li>
-            <li>Address: </li>
-        </ul>
-    </footer>
+    <!-- Hands Behind the Website Section -->
+    <section class="team-section">
+        <!-- Team Member 1 -->
+        <div class="team-member">
+            <img src="images/team1.jpg" alt="Team Member 1">
+            <h3>Harshit Agrawal</h3>
+            <div class="social-icons">
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        
+        <!-- Team Member 2 -->
+        <div class="team-member">
+            <img src="images/team2.jpg" alt="Team Member 2">
+            <h3>Harshit Gupta</h3>
+            <div class="social-icons">
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
 
-    <footer class="section support">
-        <h2>Support</h2>
-        <p>
-            Need help? Visit our <a href="support.html">Support Page</a> for FAQs, troubleshooting guides, 
-            and live chat with our experts.
-        </p>
-        <p>We’re here to ensure your digital safety, 24/7.</p>
-    </footer>
-            <li>Email: afterhourssupport@securenet.com</li>
-            <li>Phone: Harshit Agrawal-6377303438 , Harshit Gupta-8987464470 , Rounit Kumar Singh-7267850755</li>
-            <li>Address: Newton School of Technology,ADYPU Lohegaon Pune Maharashtra</li>
-        </ul>
-    </footer>
+        <!-- Team Member 3 -->
+        <div class="team-member">
+            <img src="images/team3.jpg" alt="Team Member 3">
+            <h3>Rounit Kumar Singh</h3>
+            <div class="social-icons">
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 AfterHours. All Rights Reserved.</p>
     </footer>
 
-
 </body>
 </html>
+

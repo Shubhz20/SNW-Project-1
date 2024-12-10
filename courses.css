@@ -1,29 +1,35 @@
-•⁠  ⁠{
+/* Reset margin and padding globally */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
+  /* Body styling */
   body {
-    font-family: Arial, sans-serif;
-    background-color: #121212; 
-    color: #191616;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Black background */
+    color: #e0e0e0; /* Light grey text for readability */
     line-height: 1.6;
   }
   
+  /* Container for content */
   .container {
     width: 90%;
     margin: 0 auto;
   }
+  
+  /* Header Styling */
   header {
-    background-color: #b71c1cl
+    background-color: #1a1a1a; /* Deep blue background */
     padding: 20px 0;
-    color: #0d0b0b;
+    color: #ffffff; /* White text */
     text-align: center;
   }
   
   header h1 {
     font-size: 2.5em;
+    color: #1DB954; /* Green color applied to h1 */
   }
   
   header nav ul {
@@ -37,25 +43,28 @@
   }
   
   header nav ul li a {
-    color: #0d0c0c;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
   }
   
   header nav ul li a:hover {
     text-decoration: underline;
+    color: #1a1a1a; /* Light blue hover effect for links */
   }
   
+  /* Hero Section Styling */
   .hero {
-    background-color: #b71c1c; 
-    color: #121010;
-    padding: 60px 0;
+    background-color: #1a1a1a; /* Deep blue */
+    color: #ffffff; /* White text */
+    padding: 80px 0;
     text-align: center;
   }
   
   .hero-text h2 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 20px;
+    color: #1DB954; /* Green color applied to h2 */
   }
   
   .hero-text p {
@@ -64,107 +73,183 @@
   }
   
   .cta-button {
-    background-color: #000;
-    color: #b71c1c; 
+    background-color: #1a1a1a; /* Black button */
+    color: #0f0f10; /* Light blue text */
     padding: 15px 30px;
     font-size: 1.1em;
     text-decoration: none;
     border-radius: 5px;
-    border: 2px solid #b71c1c;
+    border: 2px solid #66b3ff; /* Light blue border */
   }
   
   .cta-button:hover {
-    background-color: #b71c1c;
-    color: #000;
-  }
-  .upcoming-classes {
-    background-color: #211f1f; 
-    padding: 40px 0;
+    background-color: #1a1a1a; /* Light blue background on hover */
+    color: #000000; /* Black text */
   }
   
-  .upcoming-classes h2 {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
-  
-  .class-list {
+ /* Make the class-list use Flexbox */
+.class-list {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute space evenly between items */
+    gap: 20px; /* Add space between the boxes */
+    flex-wrap: wrap; /* Allow wrapping for smaller screen sizes */
   }
   
+  /* Style for each class-item box */
   .class-item {
-    background-color: #211f1f; 
-    border: 2px solid #b71c1c;
-    padding: 20px;
-    margin: 10px;
-    width: 30%;
+    background-color: #1a1a1a; /* Dark background for class items */
+    border: 2px solid #b71c1c; /* Border around each item */
+    padding: 15px;
+    width: 30%; /* Set width to 30% of the container */
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensures no content overflows */
+    transition: transform 0.3s ease-in-out; /* Optional: for smooth hover effect */
   }
   
+  /* Hover effect to scale up each item slightly */
+  .class-item:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Make images responsive inside each class-item */
+  .class-item img {
+    width: 100%; /* Image will take full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    border-radius: 8px; /* Optional: rounded corners for the image */
+    margin-bottom: 15px; /* Space between image and text */
+  }
+  
+  /* Make sure text (like class names and descriptions) are styled clearly */
   .class-item h3 {
     font-size: 1.5em;
-    color: #b71c1c;
+    color: #1DB954; /* Greenish color for headings */
+    margin-bottom: 10px;
   }
   
   .class-item p {
     font-size: 1.1em;
+    color: #ffffff; /* White color for text */
   }
   
-  .courses {
-    padding: 40px 0;
-    background-color: #000000;
+  
+ /* Differentiating 'Our Cybersecurity Courses' section */
+.courses {
+    background-color: #121212; /* Dark background for the courses section */
+    color: #ffffff; /* White text for readability */
+    padding: 60px 0;
+    border-top: 3px solid #1DB954; /* Green border on top to differentiate the section */
   }
   
-  .courses h2 {
+  /* Container for Courses Section */
+  .container {
+    width: 90%;
+    margin: 0 auto;
     text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px;
   }
   
+  /* Styling for the Course List */
   .course-list {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: 20px; /* Add spacing between the items */
   }
   
+  /* Individual Course Item Styling */
   .course-item {
-    background-color: #000000; 
-    border: 2px solid #b71c1c;
+    background-color: #1f1f1f; /* Darker background for the course box */
+    border: 2px solid #1DB954; /* Greenish border for the courses */
     padding: 20px;
-    margin: 10px;
-    width: 30%;
+    width: 30%; /* Adjust width for 3 items in a row */
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Dark shadow for depth */
+    border-radius: 12px; /* Rounded corners for course boxes */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for hover effects */
   }
   
+  /* Hover effect for Course Items */
+  .course-item:hover {
+    transform: scale(1.05); /* Slightly zoom in the course item */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Darker shadow on hover for a raised effect */
+  }
+  
+  /* Course Item Images */
+  .course-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px; /* Rounded corners for images */
+    margin-bottom: 15px; /* Space between image and text */
+  }
+  
+  /* Course Title Styling */
   .course-item h3 {
-    font-size: 1.5em;
-    color: #b71c1c;
+    font-size: 1.7em;
+    color: #1DB954; /* Green color for headings */
+    margin-bottom: 10px;
+    font-weight: bold;
   }
   
+  /* Course Description Text */
   .course-item p {
-    font-size: 1.1em;
+    font-size: 1.2em;
+    color: #dcdcdc; /* Light grey text for descriptions */
     margin-bottom: 20px;
   }
   
+  /* Button Styling for Course Items */
+  .cta-button {
+    background-color: #1DB954; /* Green background for buttons */
+    color: #121212; /* Dark text color for contrast */
+    padding: 12px 24px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #1DB954; /* Green border matching the button color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  /* Hover effect for CTA buttons */
+  .cta-button:hover {
+    background-color: #121212; /* Dark background for the button on hover */
+    color: #1DB954; /* Green text on hover */
+    border-color: #1DB954; /* Green border on hover */
+  }
+  
+  /* Responsiveness for smaller screens */
+  @media (max-width: 768px) {
+    .course-item {
+      width: 45%; /* 2 items per row on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .course-item {
+      width: 100%; /* Full width for items on very small screens */
+    }
+  }
+  
+  
+  /* Progress Tracker Section Styling */
   .progress-tracker {
-    background-color: #121212; 
+    background-color: #121212; /* Black background */
     padding: 40px 0;
   }
   
   .progress-tracker h2 {
     text-align: center;
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 20px;
+    color: #1DB954; /* Green color applied to h2 */
   }
   
   .progress-bar {
-    background-color: #9a0d0d; 
+    background-color: #1d9c50;  /* Light blue progress bar */
     height: 30px;
-    color: #161010;
+    color: #ffffff; /* White text inside progress bar */
     text-align: center;
     padding: 5px 0;
     border-radius: 5px;
@@ -176,10 +261,27 @@
     margin: 10px auto;
   }
   
-  /* Footer Section */
+  /* Footer Section Styling */
   footer {
-    background-color: #b71c1c;
-    color: #170e0e;
+    background-color: #1a1a1a;  /* Deep blue background */
+    color: #ffffff; /* White text */
     text-align: center;
     padding: 20px 0;
   }
+  
+  footer p {
+    font-size: 1em;
+    color: #ffffff;
+  }
+  
+  footer a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+    color: #66b3ff; /* Light blue hover effect for footer links */
+  }
+
+  
