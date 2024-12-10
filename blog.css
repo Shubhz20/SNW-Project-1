@@ -1,81 +1,68 @@
-
-{
+/* Basic reset and box-sizing for consistent layout */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Set up font family, color, and background for the whole page */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #121212;
-    color: #ddd;
+    background-color: #1a1a1a; /* Dark background for the page */
+    color: #ddd; /* Light gray text for contrast */
     line-height: 1.6;
 }
 
+/* Container to center content and provide consistent padding */
 .container {
     width: 80%;
     margin: 0 auto;
+    padding: 20px;
 }
 
-a {
-    color: #f44336;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
+/* Header Styling */
 header {
-    background-color: #1c1c1c;
+    background-color: #121212; /* Dark background for header */
     padding: 20px 0;
     border-bottom: 2px solid #333;
     text-align: center;
 }
 
 header h1 {
-    color: #f44336;
-    font-size: 36px;
+    color: #1E90FF; /* Bright blue color for the title */
+    font-size: 3em;
+    font-weight: bold;
 }
 
+/* Main Content Styling */
 main {
     padding: 40px 0;
-    background-color: #1a1a1a;
+    background-color: #121212; /* Dark background for main content */
 }
 
+/* Blog Posts Section */
 .blog-posts {
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
+/* Individual Post Styling */
 .post {
-    background-color: #2b2b2b;
-    margin-bottom: 20px;
+    background-color: #2b2b2b; /* Dark gray for post background */
     padding: 20px;
-    border-radius: 8px;
-    transition: background-color 0.3s;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
+/* Hover effect for each post */
 .post:hover {
-    background-color: #333;
+    transform: scale(1.02); /* Slight zoom-in effect */
+    background-color: #333; /* Lighter gray when hovered */
 }
 
-.post h2 {
-    color: #f44336;
-    font-size: 24px;
-}
-
-.post .date {
-    font-size: 14px;
-    color: #888;
-    margin-bottom: 10px;
-}
-
-.post p {
-    font-size: 16px;
-    color: #ddd;
-}
-
+/* Post Image Styling */
 .post-image {
     width: 100%;
     height: auto;
@@ -83,8 +70,29 @@ main {
     margin-bottom: 20px;
 }
 
+/* Post Heading */
+.post h2 {
+    color: #1E90FF; /* Bright blue for post titles */
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Post Date Styling */
+.post .date {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+/* Post Description Styling */
+.post p {
+    font-size: 16px;
+    color: #ddd;
+}
+
+/* Footer Styling */
 footer {
-    background-color: #1c1c1c;
+    background-color: #121212; /* Dark background for footer */
     color: #bbb;
     padding: 20px 0;
     text-align: center;
@@ -94,4 +102,38 @@ footer {
 
 footer p {
     font-size: 14px;
+}
+
+/* Link Styling */
+a {
+    color: #1E90FF; /* Bright blue for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .post h2 {
+        font-size: 1.8em;
+    }
+
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .post {
+        padding: 15px;
+    }
+
+    .post-image {
+        margin-bottom: 15px;
+    }
 }
